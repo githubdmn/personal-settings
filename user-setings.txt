@@ -1,0 +1,9 @@
+{
+    "editor.wordWrap": "on",
+    "editor.minimap.enabled": false,
+    "python.pythonPath": "python3.7",
+    "python.linting.enabled": false,
+    "debug.node.autoAttach": "on",
+    "terminal.integrated.cursorStyle": "underline",
+    "workbench.panel.defaultLocation": "right"
+}
