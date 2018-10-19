@@ -1,0 +1,6 @@
+ssh-keygen -t rsa -b 4096 -C "dmninbox@gmail.com"
+ssh-add ~/.ssh/id_rsa/github
+ssh-add ~/.ssh/id_rsa/gitlab
+
+ssh -vT git@github.com
+ssh -vT git@gitlab.com
