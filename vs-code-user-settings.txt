@@ -6,4 +6,9 @@
     "debug.node.autoAttach": "on",
     "terminal.integrated.cursorStyle": "underline",
     "workbench.panel.defaultLocation": "right"
+    // Enable usage data and errors to be sent to a Microsoft online service.
+    "telemetry.enableTelemetry": false,
+    "workbench.colorTheme": "Default Dark+"
+    // Number of editors shown in the Open Editors pane.
+    "explorer.openEditors.visible": 0
 }
