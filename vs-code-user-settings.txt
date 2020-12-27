@@ -1,14 +1,32 @@
 {
     "editor.wordWrap": "on",
+    "editor.fontSize": 13,
     "editor.minimap.enabled": false,
-    "python.pythonPath": "python3.7",
-    "python.linting.enabled": false,
-    "debug.node.autoAttach": "on",
+    "editor.autoIndent": "brackets",
+    "python.pythonPath": "python3",
+    "python.linting.enabled": true,
+    "debug.node.autoAttach": "off",
     "terminal.integrated.cursorStyle": "underline",
-    "workbench.panel.defaultLocation": "right"
-    // Enable usage data and errors to be sent to a Microsoft online service.
+    "workbench.panel.defaultLocation": "right",
     "telemetry.enableTelemetry": false,
-    "workbench.colorTheme": "Default Dark+"
-    // Number of editors shown in the Open Editors pane.
-    "explorer.openEditors.visible": 0
+    "explorer.openEditors.visible": 0,
+    "window.zoomLevel": 0,
+    "git.autofetch": true,
+    "terminal.integrated.fontSize": 12,
+    "workbench.statusBar.visible": true,
+    "window.menuBarVisibility": "toggle",
+    "workbench.editor.tabCloseButton": "off",
+    "workbench.activityBar.visible": false,
+    "breadcrumbs.enabled": true,
+    "editor.formatOnSave": true,
+    "editor.formatOnPaste": true,
+    "python.jediEnabled": false,
+    "javascript.updateImportsOnFileMove.enabled": "always",
+    "workbench.colorTheme": "GitHub Dark",
+    "workbench.editor.limit.enabled": true,
+    "workbench.editor.limit.value": 1,
+    "python.languageServer": "Pylance"
 }
+
+
+

@@ -1,0 +1,13 @@
+# python3 get-pip.py
+# pip install vituralenv
+$ virtualenv myenv
+$ . bin/activate
+$(env) pip install django
+$(env) django-admin startproject myproject
+$(env) python3 myproject startapp app-first
+$(env) myproject/manage.py runserver
+$(env deactivate)
+
+
+---------------------
+https://virtualenvwrapper.readthedocs.io/en/latest/

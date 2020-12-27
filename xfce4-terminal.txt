@@ -1,0 +1,49 @@
+terminal --disable-server -H --tab --title=1st_tab --tab --title=2nd_tab
+
+
+https://superuser.com/questions/471517/how-can-i-save-my-multiple-tabs-session-in-an-xfce4-terminal
+
+# Solution 1
+
+You can create a shortcut with pre-defined tabs like this:
+Terminal --geometry=100x40 --hide-menubar --hide-toolbars -T "Host1" -e "ssh -t root@host1" --tab -T "Host2" -e "ssh -t root@host2"
+
+To have each tab have a different working directory you can do it this way:
+Terminal --working-directory=$HOME/tmp --tab --working-directory=$HOME/src --tab --working-directory=$HOME/opt
+
+
+Not that the first one doesn't have a --tab before it, making it associate with the new top-level window. Then two additional tabs with different working directories.
+
+Try to avoid using ~ expansion, as that is a shell feature that may not work in other context (such as custom launchers).
+
+
+
+# Solution 2
+
+xfce4-terminal --maximize --title='Neovim' -x bash -c "nvr -s; exec bash"
+xfce4-terminal --tab --title='psql' -x bash -c "psql -d zzz; exec bash"
+xfce4-terminal --tab --title='Cypher-shell' -x bash -c "cd /mnt/Vancouver/Programming/data/hmdb; exec bash"
+xfce4-terminal --tab --title='Cycli' -x bash -c "source activate py35 && cycli -P *** -u *** -p ***; exec bash"
+xfce4-terminal --tab --title='Py3' -x bash -c "source activate py35 && python; exec bash"
+xfce4-terminal --tab --title='bc' -x bash -c "bc; exec bash"
+xfce4-terminal --tab --title='ud' -x bash -c "pacaur -Syu; exec bash"
+
+
+
+# Addition
+https://unix.stackexchange.com/questions/47271/prevent-gnu-screen-from-terminating-session-once-executed-script-ends
+
+To keep screen busy after the script completes, just keep something persistent running in a window. The simplest choice for that "something" is probably an interactive shell. Here's one way to do it (assuming bash as the choice of interactive shell):
+
+screen -dmS session_name sh -c '/share/Sys/autorun/start_udp_listeners.sh; exec bash' 
+	-dm: starts screen in detached mode 
+	-S: sets session name for screen for easier retrieval later on
+	sh -c '...': instead of simply running your script, which will terminate, 
+	use sh -c to run multiple commands
+	exec bash: after the script terminates, the sh from above will switch over to an interactive shell (bash), which should never exit until something external terminates it. This will keep screen open as long as the bash instance is alive.
+
+
+
+
+
+	

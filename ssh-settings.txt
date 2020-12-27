@@ -1,6 +1,15 @@
+ssh-keygen -t ed25519 -C "your_email@example.com"
+Note: If you are using a legacy system that doesn't support the Ed25519 algorithm, use:
 ssh-keygen -t rsa -b 4096 -C "@gmail.com"
+
+eval "$(ssh-agent -s)"
+
 ssh-add ~/.ssh/id_rsa/github
 ssh-add ~/.ssh/id_rsa/gitlab
 
 ssh -vT git@github.com
 ssh -vT git@gitlab.com
+
+
+
+
